@@ -641,3 +641,9 @@ button.chip.active, button.chip:hover { background: var(--ink); color: #fff; bor
 .cf-avatar { position: relative; overflow: hidden; }
 .cf-avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .cf-card .cf-avatar { width: 76px; height: 76px; border-radius: 50%; box-shadow: 0 0 0 3px #fff, 0 0 0 5px rgba(221,2,22,.25); }
+/* Full founder photos */
+.cf-card .cf-top { align-items: flex-end; }
+.cf-card .cf-avatar { width: 150px; height: 150px; border-radius: 20px; box-shadow: 0 14px 30px -14px rgba(120,10,20,.45); font-size: 2rem; }
+.cf-card .cf-avatar img { object-fit: cover; }
+.cf-card.delivery .cf-avatar { width: 120px; height: 120px; }
+@media (max-width: 600px) { .cf-card .cf-top { flex-direction: column; align-items: flex-start; } .cf-card .cf-avatar { width: 100%; height: auto; aspect-ratio: 1; } }
