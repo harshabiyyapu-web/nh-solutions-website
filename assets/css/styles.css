@@ -647,3 +647,13 @@ button.chip.active, button.chip:hover { background: var(--ink); color: #fff; bor
 .cf-card .cf-avatar img { object-fit: cover; }
 .cf-card.delivery .cf-avatar { width: 120px; height: 120px; }
 @media (max-width: 600px) { .cf-card .cf-top { flex-direction: column; align-items: flex-start; } .cf-card .cf-avatar { width: 100%; height: auto; aspect-ratio: 1; } }
+
+/* Dark-background contrast fixes */
+.stat-band b { color: #fff; }
+.stat-band span { color: #d9cfcf; font-size: .92rem; line-height: 1.45; display: block; margin-top: 4px; }
+.dark, .product-band, .offices, .why-box, .feature-box { color: #d9cfcf; }
+.dark p, .product-band p, .offices p, .why-box p, .feature-box p, .feature-box li { color: #d9cfcf; }
+.dark .sec-head p { color: #d9cfcf; }
+.partner small { color: #b5a9a9; }
+.founder-quote small { opacity: 1; color: #d9cfcf; }
+.cta-banner p { color: #ffd0ca; }
