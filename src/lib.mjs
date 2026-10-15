@@ -6,9 +6,9 @@ export { CASES };
 export const CO = {
   name: "NH Solutions",
   tagline: "Product & Growth Studio",
-  email: "hello@nhsolutions.in",
-  salesEmail: "sales@nhsolutions.in",
-  careersEmail: "careers@nhsolutions.in",
+  email: "hello@nhsolutions.co.in",
+  salesEmail: "sales@nhsolutions.co.in",
+  careersEmail: "careers@nhsolutions.co.in",
   phones: [
     ["India", "+91 91000 45678"],
     ["WhatsApp", "+91 91000 45678"],
