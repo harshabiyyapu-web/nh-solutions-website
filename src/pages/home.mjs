@@ -76,15 +76,14 @@ ${caseSlider()}
 <div class="wrap"><div class="h-scroll" id="ind">${industries.map(([ic, h, p, href, img]) => `<a class="ind-card" href="${href}"><div class="ind-img">${art(img, "", "")}</div>${icon(ic)}<h3>${h}</h3><p>${p}</p><span class="link-arrow">Learn more</span></a>`).join("")}</div></div>
 </section>
 
-<section><div class="wrap founder">
-  <div class="founder-visual reveal"><div class="ring"></div><div class="founder-portrait duo"><span>NS</span><span>HB</span></div>
-    <div class="founder-card"><small>Co-founders</small><b>Naman Seth &amp; Harsha Biyyapu</b></div>
-    <div class="founder-quote">“A plan is only as good as the system that executes it.” <small>— Naman Seth</small></div></div>
-  <div>
-    <div class="sec-row" style="margin-bottom:24px"><h2 style="margin:0">Led by builders, not account managers</h2><a class="link-arrow" href="insights.html">All posts</a></div>
-    <p style="margin-bottom:22px">Every NH Solutions project has a co-founder on it. <b style="color:var(--ink)">Naman Seth</b> — our Delhi-based co-founder with deep engineering instincts and a gift for running teams — owns architecture, planning and execution. <b style="color:var(--ink)">Harsha Biyyapu</b> owns product and growth. You get both, from kickoff to launch. <a class="link-arrow" href="about.html#leadership" style="margin-left:6px">Meet the founders</a></p>
-    <div class="post-cards">${POSTS.slice(3, 5).map(postCard).join("")}</div>
-  </div>
+<section><div class="wrap">
+  <div class="sec-row"><div class="sec-head"><span class="eyebrow">Leadership</span><h2>Led by builders, not account managers</h2><p>Every NH Solutions project has a co-founder on it — from the first call to launch day.</p></div><a class="btn btn-outline-dark" href="about.html#leadership">Meet the founders</a></div>
+  <div class="cofounders">${CO.founders.map((f) => `<a class="cf-card reveal" href="about.html#${f.initials.toLowerCase()}">
+    <div class="cf-top"><span class="cf-avatar">${f.initials}</span><div><b>${f.name}</b><small>${f.role} · ${f.city}</small></div></div>
+    <p class="cf-short">${f.short}</p>
+    <ul class="check-list">${f.points.slice(0, 3).map((x) => `<li>${x}</li>`).join("")}</ul>
+    <blockquote>“${f.quote}”</blockquote>
+  </a>`).join("")}</div>
 </div></section>
 
 ${statBandDark()}
