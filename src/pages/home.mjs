@@ -77,9 +77,9 @@ ${caseSlider()}
 </section>
 
 <section><div class="wrap">
-  <div class="sec-row"><div class="sec-head"><span class="eyebrow">Leadership</span><h2>Led by builders, not account managers</h2><p>Every NH Solutions project has a co-founder on it — from the first call to launch day.</p></div><a class="btn btn-outline-dark" href="about.html#leadership">Meet the founders</a></div>
-  <div class="cofounders">${CO.founders.map((f) => `<a class="cf-card reveal" href="about.html#${f.initials.toLowerCase()}">
-    <div class="cf-top">${avatar(f)}<div><b>${f.name}</b><small>${f.role} · ${f.city}</small></div></div>
+  <div class="sec-row"><div class="sec-head"><span class="eyebrow">Leadership</span><h2>Led by builders, not account managers</h2><p>A founder is on every NH Solutions project — from the first call to launch day.</p></div><a class="btn btn-outline-dark" href="about.html#leadership">Meet the team</a></div>
+  <div class="cofounders">${CO.founders.filter((f) => f.initials === "HB").map((f) => `<a class="cf-card reveal" href="about.html#${f.initials.toLowerCase()}">
+    <div class="cf-top">${avatar(f)}<div><b>${f.name}</b><small>${f.role} · ${f.city}</small>${f.school ? `<span class="school-tag">${f.school}</span>` : ""}</div></div>
     <p class="cf-short">${f.short}</p>
     <ul class="check-list">${f.points.slice(0, 3).map((x) => `<li>${x}</li>`).join("")}</ul>
     <blockquote>“${f.quote}”</blockquote>

@@ -77,7 +77,7 @@ ${ctaBanner("Talk to a technology expert", "Tell us what you're building. A seni
 <section id="leadership"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Leadership</span><h2>Two co-founders. Every project.</h2><p>NH Solutions is run by two co-founders with complementary strengths — one makes sure it is built right, the other makes sure it wins in the market.</p></div>
   <div class="cofounders">${CO.founders.map((f) => `<article class="cf-card reveal" id="${f.initials.toLowerCase()}">
-    <div class="cf-top">${avatar(f)}<div><b>${f.name}</b><small>${f.role} · ${f.city}</small></div></div>
+    <div class="cf-top">${avatar(f)}<div><b>${f.name}</b><small>${f.role} · ${f.city}</small>${f.school ? `<span class="school-tag">${f.school}</span>` : ""}</div></div>
     <p class="cf-short">${f.short}</p>
     <p style="margin:0">${f.bio}</p>
     <ul class="check-list">${f.points.map((x) => `<li>${x}</li>`).join("")}</ul>

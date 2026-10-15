@@ -29,7 +29,7 @@ export const CO = {
       quote: "A plan is only as good as the system that executes it. My job is to make sure ours never misses.",
     },
     {
-      name: "Harsha Biyyapu", initials: "HB", photo: "founder-harsha", role: "Co-founder · Product & Growth", city: "Hyderabad",
+      name: "Harsha Biyyapu", initials: "HB", photo: "founder-harsha", role: "Co-founder · Product & Growth", city: "Hyderabad", school: "Mesa School of Business · MSL startup",
       short: "The builder-marketer behind a publishing network read by millions every month.",
       bio: "Harsha started building businesses at 13 and was leading teams by 15. He built a publishing network that reaches 3–5 million readers a month, scaled a D2C brand 4× through performance marketing, and launched an in-house multi-model AI product. At NH Solutions he leads product strategy, SEO and growth — making sure what the team builds finds its audience.",
       points: ["Leads product strategy and positioning", "Owns SEO, content and performance marketing", "Built and scaled three ventures of his own", "Works directly with founders on go-to-market"],
