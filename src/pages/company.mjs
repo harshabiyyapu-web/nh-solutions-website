@@ -76,7 +76,14 @@ ${trust()}
 ${ctaBanner("Talk to a technology expert", "Tell us what you're building. A senior engineer will reply within one business day.", "Talk to an expert")}
 <section id="leadership"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Leadership</span><h2>Two co-founders. Every project.</h2><p>NH Solutions is run by two co-founders with complementary strengths — one makes sure it is built right, the other makes sure it wins in the market.</p></div>
-  ${CO.founders.map((f) => `<div class="lead-card reveal" id="${f.initials.toLowerCase()}"><div class="lead-photo">${f.initials}</div><div><small class="cat">${f.role} · ${f.city}</small><h3 style="font-size:1.8rem;margin-top:8px">${f.name}</h3><p style="font-size:1.05rem"><b style="color:var(--ink)">${f.short}</b></p><p>${f.bio}</p><ul class="check-list" style="margin:14px 0 18px">${f.points.map((x) => `<li>${x}</li>`).join("")}</ul><blockquote class="lead-quote">“${f.quote}”</blockquote></div></div>`).join("")}
+  <div class="cofounders">${CO.founders.map((f) => `<article class="cf-card reveal" id="${f.initials.toLowerCase()}">
+    <div class="cf-top"><span class="cf-avatar">${f.initials}</span><div><b>${f.name}</b><small>${f.role} · ${f.city}</small></div></div>
+    <p class="cf-short">${f.short}</p>
+    <p style="margin:0">${f.bio}</p>
+    <ul class="check-list">${f.points.map((x) => `<li>${x}</li>`).join("")}</ul>
+    <blockquote>“${f.quote}”</blockquote>
+  </article>`).join("")}</div>
+  <div style="height:28px"></div>
   <div class="team-grid">${[["EN", "Engineering", "Full-stack, backend and mobile engineers led by senior architects."], ["AI", "AI & Data", "LLM, RAG and data engineers who build and evaluate AI systems."], ["DS", "Product Design", "Researchers and UI/UX designers who prototype before we build."], ["GR", "Growth", "SEO specialists and performance marketers who own outcomes."], ["ED", "Editorial", "Writers and editors behind content read by millions each month."], ["DL", "Delivery", "Project leads who keep scope, timelines and budgets visible."]].map(([a, n, r]) => `<div class="member reveal"><span class="avatar">${a}</span><div><b>${n}</b><small>${r}</small></div></div>`).join("")}</div>
 </div></section>
 ${testimonials()}
@@ -237,7 +244,7 @@ pages.push({
   path: "process.html", title: "How We Work | NH Solutions", desc: "NH Solutions' delivery process, engagement models and commitments.",
   body: `${pageHero({ crumb: "How we work", title: "No black boxes. No surprise invoices.", text: "Clear phases, visible progress and honest estimates — so you always know what's being built, what it costs and when it ships.", img: "workshop" })}
 ${process(STEPS, COMMITS)}
-<section class="bg-soft"><div class="wrap"><div class="lead-card reveal" style="margin:0"><div class="lead-photo">NS</div><div><span class="eyebrow">Who runs delivery</span><h2>Every plan is owned by Naman Seth</h2><p style="font-size:1.05rem">Our delivery process was designed — and is personally run — by co-founder <b>Naman Seth</b>. Naman combines hands-on technical depth with the rigour of an operator: he turns your goals into a costed plan, staffs the right engineers, reviews architecture and code, and co-executes alongside your team until launch. The result clients describe most often: no surprises.</p><blockquote class="lead-quote">“A plan is only as good as the system that executes it. My job is to make sure ours never misses.” — Naman Seth</blockquote></div></div></div></section>
+<section class="bg-soft"><div class="wrap"><div class="cf-card delivery reveal"><div><div class="cf-top" style="margin-bottom:18px"><span class="cf-avatar">NS</span><div><b>Naman Seth</b><small>Co-founder · Technology &amp; Operations · Delhi</small></div></div><span class="eyebrow">Who runs delivery</span><h2>Every plan is owned by Naman Seth</h2><p style="font-size:1.05rem">Our delivery process was designed — and is personally run — by co-founder <b>Naman Seth</b>. Naman combines hands-on technical depth with the rigour of an operator: he turns your goals into a costed plan, staffs the right engineers, reviews architecture and code, and co-executes alongside your team until launch. The result clients describe most often: no surprises.</p><blockquote class="lead-quote">“A plan is only as good as the system that executes it. My job is to make sure ours never misses.” — Naman Seth</blockquote></div></div></div></section>
 ${statBandDark("Engagement models that fit how you work")}
 ${techStack()}
 ${faq(commonFaqs.slice(6, 12), "Working with us: FAQs")}`,
