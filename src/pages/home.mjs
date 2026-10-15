@@ -1,4 +1,4 @@
-import { STATS, CO, icon, art, trust, caseSlider, ctaBanner, testimonials, faq, insights, svcGrid, statBandDark, POSTS, postCard } from "../lib.mjs";
+import { avatar, STATS, CO, icon, art, trust, caseSlider, ctaBanner, testimonials, faq, insights, svcGrid, statBandDark, POSTS, postCard } from "../lib.mjs";
 
 const caps = [
   ["ai", "AI Engineering", "Put AI to work where it pays: assistants that answer from your own data, agents that clear repetitive work, and models that predict what happens next.", ["AI Agent Development", "Generative AI Apps", "LLM & RAG Systems", "Multi-model Routing", "Predictive Analytics"], "ai-development.html", "Explore AI services"],
@@ -79,7 +79,7 @@ ${caseSlider()}
 <section><div class="wrap">
   <div class="sec-row"><div class="sec-head"><span class="eyebrow">Leadership</span><h2>Led by builders, not account managers</h2><p>Every NH Solutions project has a co-founder on it — from the first call to launch day.</p></div><a class="btn btn-outline-dark" href="about.html#leadership">Meet the founders</a></div>
   <div class="cofounders">${CO.founders.map((f) => `<a class="cf-card reveal" href="about.html#${f.initials.toLowerCase()}">
-    <div class="cf-top"><span class="cf-avatar">${f.initials}</span><div><b>${f.name}</b><small>${f.role} · ${f.city}</small></div></div>
+    <div class="cf-top">${avatar(f)}<div><b>${f.name}</b><small>${f.role} · ${f.city}</small></div></div>
     <p class="cf-short">${f.short}</p>
     <ul class="check-list">${f.points.slice(0, 3).map((x) => `<li>${x}</li>`).join("")}</ul>
     <blockquote>“${f.quote}”</blockquote>

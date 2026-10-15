@@ -1,6 +1,6 @@
 // Company, work, industry, resource and legal pages.
 import { IND_LABEL, SVC_LABEL } from "../cases.mjs";
-import { CO, STATS, SERVICES, INDUSTRIES, CASES, POSTS, TESTIMONIALS, tCards, ratingRow, postCard, pageHero, trust, icon, art, svcGrid, cardGrid, ctaBanner, caseSlider, process, STEPS, COMMITS, techStack, testimonials, faq, insights, statBandDark } from "../lib.mjs";
+import { avatar, CO, STATS, SERVICES, INDUSTRIES, CASES, POSTS, TESTIMONIALS, tCards, ratingRow, postCard, pageHero, trust, icon, art, svcGrid, cardGrid, ctaBanner, caseSlider, process, STEPS, COMMITS, techStack, testimonials, faq, insights, statBandDark } from "../lib.mjs";
 
 const svcIcons = { "ai-development": "ai", "generative-ai": "spark", "data-analytics": "data", "software-development": "code", "saas-development": "saas", "web-development": "web", "mobile-app-development": "mobile", "mvp-development": "rocket", "ui-ux-design": "design", "cloud-devops": "cloud", "seo-content": "search", "performance-marketing": "megaphone", "hire-developers": "team" };
 const svcBlurb = {
@@ -77,7 +77,7 @@ ${ctaBanner("Talk to a technology expert", "Tell us what you're building. A seni
 <section id="leadership"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Leadership</span><h2>Two co-founders. Every project.</h2><p>NH Solutions is run by two co-founders with complementary strengths — one makes sure it is built right, the other makes sure it wins in the market.</p></div>
   <div class="cofounders">${CO.founders.map((f) => `<article class="cf-card reveal" id="${f.initials.toLowerCase()}">
-    <div class="cf-top"><span class="cf-avatar">${f.initials}</span><div><b>${f.name}</b><small>${f.role} · ${f.city}</small></div></div>
+    <div class="cf-top">${avatar(f)}<div><b>${f.name}</b><small>${f.role} · ${f.city}</small></div></div>
     <p class="cf-short">${f.short}</p>
     <p style="margin:0">${f.bio}</p>
     <ul class="check-list">${f.points.map((x) => `<li>${x}</li>`).join("")}</ul>
@@ -244,7 +244,7 @@ pages.push({
   path: "process.html", title: "How We Work | NH Solutions", desc: "NH Solutions' delivery process, engagement models and commitments.",
   body: `${pageHero({ crumb: "How we work", title: "No black boxes. No surprise invoices.", text: "Clear phases, visible progress and honest estimates — so you always know what's being built, what it costs and when it ships.", img: "workshop" })}
 ${process(STEPS, COMMITS)}
-<section class="bg-soft"><div class="wrap"><div class="cf-card delivery reveal"><div><div class="cf-top" style="margin-bottom:18px"><span class="cf-avatar">NS</span><div><b>Naman Seth</b><small>Co-founder · Technology &amp; Operations · Delhi</small></div></div><span class="eyebrow">Who runs delivery</span><h2>Every plan is owned by Naman Seth</h2><p style="font-size:1.05rem">Our delivery process was designed — and is personally run — by co-founder <b>Naman Seth</b>. Naman combines hands-on technical depth with the rigour of an operator: he turns your goals into a costed plan, staffs the right engineers, reviews architecture and code, and co-executes alongside your team until launch. The result clients describe most often: no surprises.</p><blockquote class="lead-quote">“A plan is only as good as the system that executes it. My job is to make sure ours never misses.” — Naman Seth</blockquote></div></div></div></section>
+<section class="bg-soft"><div class="wrap"><div class="cf-card delivery reveal"><div><div class="cf-top" style="margin-bottom:18px">${avatar(CO.founders[0])}<div><b>Naman Seth</b><small>Co-founder · Technology &amp; Operations · Delhi</small></div></div><span class="eyebrow">Who runs delivery</span><h2>Every plan is owned by Naman Seth</h2><p style="font-size:1.05rem">Our delivery process was designed — and is personally run — by co-founder <b>Naman Seth</b>. Naman combines hands-on technical depth with the rigour of an operator: he turns your goals into a costed plan, staffs the right engineers, reviews architecture and code, and co-executes alongside your team until launch. The result clients describe most often: no surprises.</p><blockquote class="lead-quote">“A plan is only as good as the system that executes it. My job is to make sure ours never misses.” — Naman Seth</blockquote></div></div></div></section>
 ${statBandDark("Engagement models that fit how you work")}
 ${techStack()}
 ${faq(commonFaqs.slice(6, 12), "Working with us: FAQs")}`,
