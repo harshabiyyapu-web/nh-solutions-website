@@ -619,3 +619,9 @@ button.chip.active, button.chip:hover { background: var(--ink); color: #fff; bor
 .logo-img { height: 50px; width: auto; flex: none; transition: transform .3s; }
 .logo:hover .logo-img { transform: scale(1.05); }
 @media (max-width: 600px) { .logo-img { height: 40px; } }
+/* Co-founders */
+.founder-portrait.duo { display: flex; gap: 0; font-size: 2.6rem; }
+.founder-portrait.duo span { width: 50%; text-align: center; }
+.founder-portrait.duo span + span { border-left: 2px solid var(--line); }
+.founder-quote small { display: block; margin-top: 6px; opacity: .7; font-size: .78rem; }
+.lead-quote { margin: 0; padding: 14px 18px; border-left: 4px solid var(--c2); background: #fff; border-radius: 0 12px 12px 0; color: var(--ink); font-style: italic; }
