@@ -20,6 +20,22 @@ export const CO = {
   ],
   hours: "Mon–Sat, 9:00 am – 8:00 pm IST",
   founder: "Harsha Biyyapu",
+  founders: [
+    {
+      name: "Naman Seth", initials: "NS", role: "Co-founder · Technology & Operations", city: "Delhi",
+      short: "The engineer-operator who turns ambitious plans into shipped, working systems.",
+      bio: "Naman leads technology, delivery and business planning at NH Solutions from Delhi. He pairs hard-core technical depth — architecture, backend systems, infrastructure and AI — with the discipline to run teams and turn a business plan into weekly execution. When a project is complex, Naman is the person who breaks it down, sets the plan, puts the right engineers on it and stays in the details until it ships.",
+      points: ["Owns architecture and engineering standards on every build", "Builds and manages the delivery team, from hiring to code review", "Turns business plans into roadmaps, budgets and sprint goals", "Co-executes alongside clients — weekly reviews, no hand-offs"],
+      quote: "A plan is only as good as the system that executes it. My job is to make sure ours never misses.",
+    },
+    {
+      name: "Harsha Biyyapu", initials: "HB", role: "Co-founder · Product & Growth", city: "Hyderabad",
+      short: "The builder-marketer behind a publishing network read by millions every month.",
+      bio: "Harsha started building businesses at 13 and was leading teams by 15. He built a publishing network that reaches 3–5 million readers a month, scaled a D2C brand 4× through performance marketing, and launched an in-house multi-model AI product. At NH Solutions he leads product strategy, SEO and growth — making sure what the team builds finds its audience.",
+      points: ["Leads product strategy and positioning", "Owns SEO, content and performance marketing", "Built and scaled three ventures of his own", "Works directly with founders on go-to-market"],
+      quote: "Build it like you'll have to run it. We do — every day.",
+    },
+  ],
   rating: "4.5",
   socials: { linkedin: "https://www.linkedin.com/", x: "https://x.com/", instagram: "https://www.instagram.com/", youtube: "https://www.youtube.com/", github: "https://github.com/harshabiyyapu-web" },
 };
@@ -158,7 +174,7 @@ export const contact = () => `<section id="contact" class="contact-sec"><div cla
       <h3>Email us</h3><a href="mailto:${CO.salesEmail}">${CO.salesEmail}</a><a href="mailto:${CO.email}">${CO.email}</a>
       <h3>Call us</h3>${CO.phones.map(([k, v]) => `<a href="tel:${v.replace(/\s/g, "")}">${k}: ${v}</a>`).join("")}
       <h3>Working hours</h3><p style="margin:0">${CO.hours}</p><h3>What happens next</h3>
-      <ul class="check-list"><li>We sign an NDA if you need one</li><li>30-minute discovery call</li><li>Written proposal in 3–5 days</li></ul>
+      <ul class="check-list"><li>We sign an NDA if you need one</li><li>30-minute call with a co-founder</li><li>Written proposal in 3–5 days</li></ul>
     </div>
     <form class="contact-form lead-form" novalidate data-to="${CO.salesEmail}">
       <div class="form-grid">

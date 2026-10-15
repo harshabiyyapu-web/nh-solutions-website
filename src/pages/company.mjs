@@ -24,6 +24,7 @@ const commonFaqs = [
   ["Where is NH Solutions based?", "We're headquartered in India and work with clients across India, the Middle East, the UK and North America."],
   ["What makes you different from other agencies?", "We operate our own products — a media network with millions of monthly readers, a D2C brand and an AI SaaS — so we make decisions like owners and measure work by business outcomes."],
   ["How do engagements usually start?", "With a free 30-minute discovery call, followed by a written proposal with scope, timeline and an itemised estimate within 3–5 working days."],
+  ["Who leads NH Solutions?", "NH Solutions is led by co-founders Naman Seth (Technology & Operations, Delhi) and Harsha Biyyapu (Product & Growth). Naman owns architecture, team management, planning and execution on every build; Harsha owns product strategy, SEO and growth."],
   ["Do you sign NDAs?", "Yes, before any detailed discussion if you need one."],
   ["Who owns the code and IP?", "You do — 100% — from the first commit."],
   ["What engagement models do you offer?", "Fixed-scope projects, dedicated teams, growth retainers, AI sprints and staff augmentation."],
@@ -56,7 +57,7 @@ pages.push({
   <div class="sec-head"><span class="eyebrow">Our story</span><h2>We started by building for ourselves</h2>
   <p>NH Solutions started by building and growing its own digital properties — a publishing network that now reaches 3–5 million readers a month. Along the way we built the publishing tech, the SEO engine and the analytics to run it.</p>
   <p>Then came a direct-to-consumer furniture brand we scaled 4× through performance marketing, and a multi-model AI workspace we built and run in-house. Each venture taught us something agencies rarely learn: what it feels like when the product is yours and the money is yours.</p>
-  <p>Today we put that operator mindset to work for founders, publishers and growing businesses — designing, engineering and growing products as if they were our own.</p></div>
+  <p>As the work grew, Harsha teamed up with <b>Naman Seth</b> in Delhi — a technologist with rare depth across architecture, backend systems and AI, and the operating discipline to run teams and execute a business plan week after week. Naman built the delivery engine that lets NH Solutions take on complex, high-stakes builds with confidence.</p><p>Today we put that operator mindset to work for founders, publishers and growing businesses — designing, engineering and growing products as if they were our own.</p></div>
   <div><div class="value-list">${STATS.map(([b, s]) => `<div class="reveal"><b class="grad-text">${b}</b><span>${s}</span></div>`).join("")}</div></div>
 </div></section>
 ${trust()}
@@ -73,9 +74,9 @@ ${trust()}
   ${svcGrid([["ai", "AI & Data", "AI agents, generative AI apps, LLM systems and analytics.", "ai-development.html", ["AI Development", "Generative AI", "Data & Analytics"]], ["code", "Engineering", "Custom software, SaaS, web and mobile applications.", "software-development.html", ["Custom Software", "SaaS", "Web & Mobile"]], ["design", "Product", "MVPs, product design and cloud infrastructure.", "mvp-development.html", ["MVP Development", "UI/UX Design", "Cloud & DevOps"]], ["chart", "Growth", "SEO, content engineering and performance marketing.", "seo-content.html", ["SEO & Content", "Performance Marketing", "Dedicated Teams"]]])}
 </div></section>
 ${ctaBanner("Talk to a technology expert", "Tell us what you're building. A senior engineer will reply within one business day.", "Talk to an expert")}
-<section><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">Leadership</span><h2>Led by an operator, not a pitch deck</h2></div>
-  <div class="lead-card reveal"><div class="lead-photo">HB</div><div><small class="cat">Founder & CEO</small><h3 style="font-size:1.8rem;margin-top:8px">${CO.founder}</h3><p>Harsha started building businesses at 13 and was leading teams by 15. He has since built a publishing network with millions of monthly readers, scaled a D2C brand through performance marketing, and launched an in-house multi-model AI product. He leads strategy and works directly with clients on product and growth.</p><a class="link-arrow" href="${CO.socials.linkedin}">LinkedIn</a></div></div>
+<section id="leadership"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Leadership</span><h2>Two co-founders. Every project.</h2><p>NH Solutions is run by two co-founders with complementary strengths — one makes sure it is built right, the other makes sure it wins in the market.</p></div>
+  ${CO.founders.map((f) => `<div class="lead-card reveal" id="${f.initials.toLowerCase()}"><div class="lead-photo">${f.initials}</div><div><small class="cat">${f.role} · ${f.city}</small><h3 style="font-size:1.8rem;margin-top:8px">${f.name}</h3><p style="font-size:1.05rem"><b style="color:var(--ink)">${f.short}</b></p><p>${f.bio}</p><ul class="check-list" style="margin:14px 0 18px">${f.points.map((x) => `<li>${x}</li>`).join("")}</ul><blockquote class="lead-quote">“${f.quote}”</blockquote></div></div>`).join("")}
   <div class="team-grid">${[["EN", "Engineering", "Full-stack, backend and mobile engineers led by senior architects."], ["AI", "AI & Data", "LLM, RAG and data engineers who build and evaluate AI systems."], ["DS", "Product Design", "Researchers and UI/UX designers who prototype before we build."], ["GR", "Growth", "SEO specialists and performance marketers who own outcomes."], ["ED", "Editorial", "Writers and editors behind content read by millions each month."], ["DL", "Delivery", "Project leads who keep scope, timelines and budgets visible."]].map(([a, n, r]) => `<div class="member reveal"><span class="avatar">${a}</span><div><b>${n}</b><small>${r}</small></div></div>`).join("")}</div>
 </div></section>
 ${testimonials()}
@@ -128,7 +129,7 @@ pages.push({
   body: `${pageHero({ crumb: "Contact", title: "Tell us what you're building. We'll show you how we'd win.", text: "Share an idea, a stuck project or a product that's outgrown its stack. A senior engineer — never a sales script — replies within one business day with a first take.", img: "office", ctas: [["Send a message", "#contact"], ["Email us", `mailto:${CO.salesEmail}`]] })}
 <section id="book"><div class="wrap">
   <div class="sec-head center"><h2>Pick the way you like to start</h2></div>
-  ${cardGrid([["clock", "Book a 30-min call", "Pick a time for a free discovery call. We'll come prepared with questions and ideas."], ["briefcase", "Send a brief", "Share a document or deck through the form below and get a written proposal in 3–5 days."], ["team", "Hire a team", "Need developers quickly? Get matched profiles within 48 hours."]], "three")}
+  ${cardGrid([["clock", "Book a 30-min call", "Speak directly with a co-founder — Naman Seth for technology and delivery, Harsha Biyyapu for product and growth."], ["briefcase", "Send a brief", "Share a document or deck through the form below and get a written proposal in 3–5 days."], ["team", "Hire a team", "Need developers quickly? Get matched profiles within 48 hours."]], "three")}
 </div></section>
 ${faq(commonFaqs.slice(3, 9), "Before you reach out")}
 <section><div class="wrap"><div class="sec-head center"><h2>Prefer to talk right now?</h2><p>Call or WhatsApp ${CO.phones[0][1]} · ${CO.hours}</p><a class="btn btn-grad" href="https://wa.me/${CO.phones[1][1].replace(/\D/g, "")}">Chat on WhatsApp</a></div></div></section>`,
@@ -211,10 +212,10 @@ POSTS.forEach((p) => {
     body: `<section style="padding-top:56px;padding-bottom:0"><div class="wrap"><div class="article">
   <div class="breadcrumb"><a href="index.html">Home</a> / <a href="insights.html">Insights</a> / ${p.cat}</div>
   <span class="cat">${p.cat}</span><h1 style="margin-top:12px">${p.t}</h1>
-  <div class="article-meta"><span class="avatar" style="width:40px;height:40px;font-size:.8rem">HB</span><span><b style="color:var(--ink)">${CO.founder}</b> · Founder & CEO</span><span>${p.date}</span><span>${p.read} min read</span></div>
+  <div class="article-meta"><span class="avatar" style="width:40px;height:40px;font-size:.8rem">HB</span><span><b style="color:var(--ink)">${CO.founder}</b> · Co-founder</span><span>${p.date}</span><span>${p.read} min read</span></div>
   </div><div class="article-cover">${art(p.img, "", "")}</div>
   <article class="article">${p.body}
-  <div class="author-box"><span class="avatar">HB</span><div><b style="color:var(--ink);font-family:var(--head)">${CO.founder}</b><br><small>Founder & CEO, NH Solutions. Builds AI products, publishing systems and growth engines — and writes about what works.</small></div></div>
+  <div class="author-box"><span class="avatar">HB</span><div><b style="color:var(--ink);font-family:var(--head)">${CO.founder}</b><br><small>Co-founder, NH Solutions (Product & Growth). Builds AI products, publishing systems and growth engines — and writes about what works. Technical review by co-founder Naman Seth.</small></div></div>
   </article></div></section>
 ${insights("Keep reading", others)}
 ${ctaBanner()}`,
@@ -226,7 +227,7 @@ pages.push({
   path: "careers.html", title: "Careers | NH Solutions", desc: "Join NH Solutions — build AI products, platforms and growth engines.",
   body: `${pageHero({ crumb: "Careers", title: "Do the best work of your career — at real scale", text: "Join a builder-led team that ships client products and runs its own. Your work will be seen by millions, measured honestly and owned by you.", img: "careers-team", ctas: [["See open roles", "#roles"], ["Send your CV", `mailto:${CO.careersEmail}`]] })}
 <section><div class="wrap"><div class="sec-head"><h2>Why great people stay</h2></div>
-${cardGrid([["rocket", "Ownership early", "Lead real projects from your first months."], ["globe", "Real scale", "Ship to audiences of millions."], ["spark", "Latest tools", "Work with frontier AI models daily."], ["team", "Senior mentors", "Code reviews and pairing with experienced builders."], ["clock", "Flexible work", "Hybrid and remote options."], ["heart", "Learning budget", "Courses, conferences and books covered."], ["chart", "Growth paths", "Clear levels and regular reviews."], ["handshake", "Founder access", "Work directly with leadership."]])}</div></section>
+${cardGrid([["rocket", "Ownership early", "Lead real projects from your first months."], ["globe", "Real scale", "Ship to audiences of millions."], ["spark", "Latest tools", "Work with frontier AI models daily."], ["team", "Senior mentors", "Code reviews and pairing with experienced builders."], ["clock", "Flexible work", "Hybrid and remote options."], ["heart", "Learning budget", "Courses, conferences and books covered."], ["chart", "Growth paths", "Clear levels and regular reviews."], ["handshake", "Learn from the founders", "Work directly with Naman Seth on engineering and Harsha Biyyapu on product and growth."]])}</div></section>
 <section class="bg-soft" id="roles"><div class="wrap"><div class="sec-head"><h2>Open roles</h2><p>Don't see your role? Write to us anyway.</p></div>
 <div class="faq" style="max-width:none">${[["Senior Full-stack Engineer", "React · Node.js · 4+ yrs · Hybrid"], ["AI/ML Engineer", "LLMs · RAG · Python · 3+ yrs"], ["Flutter Developer", "Mobile · 2+ yrs · Hybrid"], ["Product Designer", "UX/UI · Figma · 3+ yrs"], ["SEO Specialist", "Technical SEO · News SEO · 2+ yrs"], ["Performance Marketer", "Meta & Google Ads · D2C · 2+ yrs"]].map(([r, m]) => `<div class="faq-item"><button class="faq-q">${r} <small style="font-family:var(--text);font-weight:500;color:var(--muted);margin-left:auto;margin-right:16px">${m}</small></button><div class="faq-a"><div><p>Own meaningful work from day one across client products and our own ventures. Apply with your CV and links to work you're proud of: <a href="mailto:${CO.careersEmail}"><u>${CO.careersEmail}</u></a>.</p></div></div></div>`).join("")}</div></div></section>`,
 });
@@ -236,6 +237,7 @@ pages.push({
   path: "process.html", title: "How We Work | NH Solutions", desc: "NH Solutions' delivery process, engagement models and commitments.",
   body: `${pageHero({ crumb: "How we work", title: "No black boxes. No surprise invoices.", text: "Clear phases, visible progress and honest estimates — so you always know what's being built, what it costs and when it ships.", img: "workshop" })}
 ${process(STEPS, COMMITS)}
+<section class="bg-soft"><div class="wrap"><div class="lead-card reveal" style="margin:0"><div class="lead-photo">NS</div><div><span class="eyebrow">Who runs delivery</span><h2>Every plan is owned by Naman Seth</h2><p style="font-size:1.05rem">Our delivery process was designed — and is personally run — by co-founder <b>Naman Seth</b>. Naman combines hands-on technical depth with the rigour of an operator: he turns your goals into a costed plan, staffs the right engineers, reviews architecture and code, and co-executes alongside your team until launch. The result clients describe most often: no surprises.</p><blockquote class="lead-quote">“A plan is only as good as the system that executes it. My job is to make sure ours never misses.” — Naman Seth</blockquote></div></div></div></section>
 ${statBandDark("Engagement models that fit how you work")}
 ${techStack()}
 ${faq(commonFaqs.slice(6, 12), "Working with us: FAQs")}`,

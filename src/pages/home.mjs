@@ -77,11 +77,12 @@ ${caseSlider()}
 </section>
 
 <section><div class="wrap founder">
-  <div class="founder-visual reveal"><div class="ring"></div><div class="founder-portrait">HB</div>
-    <div class="founder-card"><small>Founder & CEO</small><b>${CO.founder}</b></div>
-    <div class="founder-quote">“Build it like you'll have to run it. We do — every day.”</div></div>
+  <div class="founder-visual reveal"><div class="ring"></div><div class="founder-portrait duo"><span>NS</span><span>HB</span></div>
+    <div class="founder-card"><small>Co-founders</small><b>Naman Seth &amp; Harsha Biyyapu</b></div>
+    <div class="founder-quote">“A plan is only as good as the system that executes it.” <small>— Naman Seth</small></div></div>
   <div>
-    <div class="sec-row" style="margin-bottom:24px"><h2 style="margin:0">Notes from the founder</h2><a class="link-arrow" href="insights.html">All posts</a></div>
+    <div class="sec-row" style="margin-bottom:24px"><h2 style="margin:0">Led by builders, not account managers</h2><a class="link-arrow" href="insights.html">All posts</a></div>
+    <p style="margin-bottom:22px">Every NH Solutions project has a co-founder on it. <b style="color:var(--ink)">Naman Seth</b> — our Delhi-based co-founder with deep engineering instincts and a gift for running teams — owns architecture, planning and execution. <b style="color:var(--ink)">Harsha Biyyapu</b> owns product and growth. You get both, from kickoff to launch. <a class="link-arrow" href="about.html#leadership" style="margin-left:6px">Meet the founders</a></p>
     <div class="post-cards">${POSTS.slice(3, 5).map(postCard).join("")}</div>
   </div>
 </div></section>
