@@ -6,9 +6,9 @@ export { CASES };
 export const CO = {
   name: "NH Solutions",
   tagline: "Product & Growth Studio",
-  email: "hello@nhsolutions.co.in",
-  salesEmail: "sales@nhsolutions.co.in",
-  careersEmail: "careers@nhsolutions.co.in",
+  email: "harsha@nhsolutions.co.in",
+  salesEmail: "harsha@nhsolutions.co.in",
+  careersEmail: "harsha@nhsolutions.co.in",
   phones: [
     ["India", "+91 91000 45678"],
     ["WhatsApp", "+91 91000 45678"],
@@ -172,7 +172,7 @@ export const contact = () => `<section id="contact" class="contact-sec"><div cla
       <span class="eyebrow">Contact us</span>
       <h2>Let's build something worth talking about.</h2>
       <p>Tell us what you're building. You'll get a reply from a senior engineer — not a sales script — within one business day, with a suggested approach and a ballpark.</p>
-      <h3>Email us</h3><a href="mailto:${CO.salesEmail}">${CO.salesEmail}</a><a href="mailto:${CO.email}">${CO.email}</a>
+      <h3>Email us</h3><a href="mailto:${CO.email}">${CO.email}</a>
       <h3>Call us</h3>${CO.phones.map(([k, v]) => `<a href="tel:${v.replace(/\s/g, "")}">${k}: ${v}</a>`).join("")}
       <h3>Working hours</h3><p style="margin:0">${CO.hours}</p><h3>What happens next</h3>
       <ul class="check-list"><li>We sign an NDA if you need one</li><li>30-minute call with a co-founder</li><li>Written proposal in 3–5 days</li></ul>
